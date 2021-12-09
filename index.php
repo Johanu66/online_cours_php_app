@@ -1,0 +1,16 @@
+<?php
+    session_start();
+    if(isset($_SESSION["id"])){
+        if($_SESSION['id_type_compte']==1){
+            header("Location:admin/tb/tb.php");
+        }
+        elseif($_SESSION['id_type_compte']==2){
+            header("Location:professeur/tb/tb.php");
+        }
+        elseif($_SESSION['id_type_compte']==3){
+            header("Location:etudiant/tb/tb.php");
+        }
+    }
+    else{
+        header("Location:others/connexion.php");
+    }

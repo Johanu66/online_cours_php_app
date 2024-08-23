@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php include("header-inclusion-for-connexion.php"); ?>
     </head>
-    <body>
+    <body style="background-image: url('../img/bg.jpg');background-position: center;background-size: cover;">
         <?php
             include("db.php");
             include("fonctions-sql.php");
@@ -61,11 +61,11 @@
                 setcookie("success","",-1,"/");
             }
         ?>
-        <div class="error-pagewrap">
+        <div class="error-pagewrap" style="background-color: rgba(0,0,0,0.3);">
             <div class="error-page-int">
                 <div class="text-center m-b-md custom-login">
                     <h3>CONNEXION</h3>
-                    <p>Ceci est la meilleure application de cours en ligne</p>
+                    <p>Ceci est une version de test avec des identifiants de visiteur.<br>L'application originale est privée et interne à O-CLASS</p>
                 </div>
                 <div class="content-error">
                     <div class="hpanel">
@@ -73,12 +73,12 @@
                             <form action="" id="loginForm" method="POST">
                                 <div class="form-group">
                                     <label class="control-label" for="email">Email</label>
-                                    <input type="email" placeholder="example@gmail.com" title="Please enter you username" required value="<?php if(isset($_POST['email'])){ echo($_POST['email']); } ?>" name="email" id="email" class="form-control">
+                                    <input type="email" placeholder="example@gmail.com" title="Please enter you username" required value="<?php if(isset($_POST['email'])){ echo($_POST['email']); } else{ echo "alice.leroy@example.com"; } ?>" name="email" id="email" class="form-control">
                                     <span class="help-block small">Votre unique email pour l'application</span>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="mdp_compte">Mot de pass</label>
-                                    <input type="password" title="Please enter your password" placeholder="******" value="" required name="mdp_compte" id="mdp_compte" class="form-control">
+                                    <input type="password" title="Please enter your password" placeholder="******" value="password123" required name="mdp_compte" id="mdp_compte" class="form-control">
                                     <span class="help-block small">Votre fort mot de passe</span>
                                 </div>
                                 <div class="form-group">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <div class="text-center login-footer">
-                    <p>Copyright © 2021. Tous droits réservés. Créer par Johanu</p>
+                    <p>Copyright © 2021. Tous droits réservés. Créer par RandEver</p>
                 </div>
             </div>   
         </div>

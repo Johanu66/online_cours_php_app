@@ -171,7 +171,7 @@
         <script src="../js/sweetalert/sweetalert.min.js"></script>
     </head>
 
-    <body>
+    <body style="background-image: url('../img/bg.jpg');background-position: center;background-size: cover;">
         <?php
             if(isset($alert_text)){
                 ?>
@@ -181,7 +181,7 @@
                 <?php
             }
         ?>
-        <div class="error-pagewrap">
+        <div class="error-pagewrap" style="background-color: rgba(0,0,0,0.3);">
             <div class="error-page-int">
                 <div class="text-center custom-login">
                     <h3>Inscription</h3>
@@ -274,14 +274,14 @@
                                 </div>
                                 <div class="text-center">
                                     <input class="btn btn-success loginbtn" type="submit" name="submit" value="S'inscrire">
-                                    <a href="connexion.php" class="btn btn-default" style="padding-left: 10px; padding-right: 10px;">Annuler</a>
+                                    <a href="connexion.php" class="btn btn-default" style="padding-left: 10px; padding-right: 10px;">J'ai déjà un compte</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="text-center login-footer">
-                    <p>Copyright © 2021. Tous droits réservés. Créer par Johanu</p>
+                    <p>Copyright © 2021. Tous droits réservés. Créer par RandEver</p>
                 </div>
             </div>   
         </div>
